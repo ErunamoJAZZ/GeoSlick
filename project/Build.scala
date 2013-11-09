@@ -5,19 +5,20 @@ object MyBuild extends Build {
   lazy val project = Project("root", file(".")) settings(
     organization := "com.azavea.geotrellis",
     name := "geoslick",
-    version := "0.1.0-SNAPSHOT",
+    version := "0.1.1-SNAPSHOT",
 
-    scalaVersion := "2.10.0",
+    scalaVersion := "2.10.3",
 
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-optimize"),
 
     parallelExecution := false,    
 
     libraryDependencies ++= Seq(
-        "com.typesafe" % "slick_2.10.0-RC5" % "0.11.2",
-        "org.slf4j" % "slf4j-nop" % "1.6.4",
+        "com.typesafe.slick" %% "slick" % "1.0.1",
+        "org.slf4j" % "slf4j-nop" % "1.7.5",
         //"postgresql" % "postgresql" % "8.4-702.jdbc4",
-        "postgresql" % "postgresql" % "9.1-901.jdbc4",
+        //"postgresql" % "postgresql" % "9.1-901.jdbc4",
+        "org.postgresql" % "postgresql" % "9.3-1100-jdbc41",
         "com.vividsolutions" % "jts" % "1.12",
         "org.scalatest" % "scalatest_2.10.0" % "2.0.M5" % "test"
     ),
